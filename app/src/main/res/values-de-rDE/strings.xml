@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <string name="navigation_drawer_open">Öffnen</string>
+    <string name="navigation_drawer_close">Schließen</string>
+    <string name="nav_header_desc">Navigation</string>
+    <string name="action_settings">Einstellungen</string>
+    <string name="menu_home">Meine Rezepte</string>
+    <string name="menu_gallery">Galerie</string>
+    <string name="menu_Search">Suche</string>
+    <string name="action_language">Sprache</string>
+    <string name="app_name">Rezepte Buch</string>
+</resources>

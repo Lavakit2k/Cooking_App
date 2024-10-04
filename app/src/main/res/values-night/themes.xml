@@ -1,0 +1,17 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.RezepteBuch" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/ultra_dark_turquoise</item>
+        <item name="colorPrimaryVariant">@color/ultra_dark_turquoise</item>
+        <item name="colorOnPrimary">@color/ultra_dark_turquoise</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/light_turquoise</item>
+        <item name="colorSecondaryVariant">@color/light_turquoise</item>
+        <item name="colorOnSecondary">@color/dark_turquoise</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">@color/light_turquoise</item>
+        <!-- Customize your theme here. -->
+        <item name="android:actionMenuTextColor">@color/white</item>
+    </style>
+</resources>

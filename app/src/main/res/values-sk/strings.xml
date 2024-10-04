@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+
+    <string name="app_name">Kniha receptov</string>
+    <string name="navigation_drawer_open">Otvoriť </string>
+    <string name="navigation_drawer_close">Zatvoriť </string>
+    <string name="nav_header_desc">Navigačná hlavička</string>
+    <string name="action_settings">Nastavenia</string>
+    <string name="menu_home">Domov</string>
+    <string name="menu_gallery">Galéria</string>
+    <string name="menu_Search">Hľadanie</string>
+    <string name="action_language">Jazyk</string>
+
+</resources>
