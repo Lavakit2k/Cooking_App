@@ -10,4 +10,9 @@
     <string name="menu_Search">Suche</string>
     <string name="action_language">Sprache</string>
     <string name="app_name">Rezepte Buch</string>
+    <string name="select_language">Sprache auswählen</string>
+    <string name="RecipeAddNameHint">Zutaten Name</string>
+    <string name="RecipeAddAmountHint">Anzahl</string>
+    <string name="RecipeAddWeightHint">Menge (in g)</string>
+    <string name="RecipeAddIngredient">Zutat hinzufügen</string>
 </resources>

@@ -9,6 +9,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
+import com.example.rezeptebuch.ui.NewRecipeActivity;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
 
@@ -25,7 +26,6 @@ import com.example.rezeptebuch.databinding.ActivityMainBinding;
 
 import java.util.Locale; // Hier wird die Locale-Klasse importiert
 
-import com.example.rezeptebuch.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -39,6 +39,8 @@ public class MainActivity extends AppCompatActivity {
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
+        Ingredient.setAllIngredients();
+
         setSupportActionBar(binding.appBarMain.toolbar);
 
         binding.appBarMain.AddButton.setOnClickListener(new View.OnClickListener() {
@@ -47,6 +49,8 @@ public class MainActivity extends AppCompatActivity {
                 Snackbar.make(view, "Adding Recipe", Snackbar.LENGTH_LONG)
                         .setAction("Action", null)
                         .setAnchorView(R.id.AddButton).show();
+                Intent intent = new Intent(MainActivity.this, NewRecipeActivity.class);
+                startActivityForResult(intent, 1); // 1 ist der Request-Code
             }
         });
 
@@ -120,7 +124,6 @@ public class MainActivity extends AppCompatActivity {
         dialog.show();
     }
 
-
     @Override
     public boolean onSupportNavigateUp() {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
@@ -141,4 +144,21 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if (requestCode == 1 && resultCode == RESULT_OK) {
+            // Die Daten von der recipeActivity holen
+            String name = data.getStringExtra("ingredient_name");
+            int amount = data.getIntExtra("ingredient_amount", 0);
+            float weight = data.getFloatExtra("ingredient_weight", 0f);
+
+            // Füge die Zutat der Liste hinzu oder aktualisiere die UI
+            Ingredient newIngredient = new Ingredient(Ingredient.AllIngredients.size(), name, amount, weight);
+            Ingredient.AllIngredients.add(newIngredient);
+
+            Snackbar.make(binding.getRoot(), "Ingredient added: " + name, Snackbar.LENGTH_LONG).show();
+        }
+    }
 }

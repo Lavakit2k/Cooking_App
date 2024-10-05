@@ -13,10 +13,14 @@
     <string name="menu_gallery">Gallery</string>
     <string name="menu_Search">Search</string>
     <string name="action_language">Language</string>
-    <string name="select_language" translatable="false">Select Language</string>
+    <string name="select_language">Select Language</string>
     <string name="action_language_de" translatable="false">Deutsch</string>
     <string name="action_language_en" translatable="false">English</string>
     <string name="action_language_sk" translatable="false">Slovenský</string>
+    <string name="RecipeAddNameHint">Ingredient Name</string>
+    <string name="RecipeAddAmountHint">Amount</string>
+    <string name="RecipeAddWeightHint">Weight (in g)</string>
+    <string name="RecipeAddIngredient">Add Ingredient</string>
 
 
 </resources>

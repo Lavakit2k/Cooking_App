@@ -11,5 +11,6 @@
     <string name="menu_gallery">Galéria</string>
     <string name="menu_Search">Hľadanie</string>
     <string name="action_language">Jazyk</string>
+    <string name="select_language">vyberte jazyk</string>
 
 </resources>
